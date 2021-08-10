@@ -1,0 +1,13 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.username }}</h5>
+            <p class="card-text">This user with id {{ user.id }} was created since {{ user.created|date("m/d/Y H:i:s") }}</p>
+        </div>
+    </div>
+
+{% endblock %}

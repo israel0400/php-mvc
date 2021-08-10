@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+{% block messages %}
+    {% if result is defined %}
+        {% if result == false %}
+            <div class="alert alert-danger">
+                The username or password doesnt match.
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <div class="col-12 mt-3">
+        <h3 class="text-center text-muted">Iniciar Sesión</h3>
+        <hr>
+        <form method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input class="form-control" type="text" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" type="password" name="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Login</button>
+        </form>
+    </div>
+{% endblock %}

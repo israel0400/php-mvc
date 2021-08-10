@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+    <div class="col mt-3">
+        {% if result == true %}
+
+            <div class="alert alert-success">
+                The user was deleted
+            </div>
+
+        {% else %}
+            
+            <div class="alert alert-danger">
+                Is not posible to delete the user
+            </div>
+
+        {% endif %}
+    </div>
+
+{% endblock %}
